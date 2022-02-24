@@ -1,0 +1,59 @@
+{
+	"name": "snd-lib",
+	"version": "1.0.0",
+	"description": "With the spread of smart speakers and wireless earphones, the importance of sound in interaction design is increasing day by day. However, compared to many researches and practices in the fields of visual design and animation in interaction design, it seems that not enough knowledge has been shared about interaction design with sound, except in some fields such as games.\nInteraction should not be limited to text and visuals, but should be richer than that. In order to make the intensity of interaction richer and stronger, we should have more discussion about sound.\nHowever, in the area of interaction design, there are fewer sound designers than visual designers and programmers, and there are certainly barriers to creating sound.\nTo encourage UX developers to further explore discussions in the area of interaction design with sound, we have developed UI sound assets that can be used for free without worrying about licensing.\nUI sound assets, developed in collaboration with multiple sound designers, are designed to fit the components used in many modern UIs. Each asset is individually designed with a different concept, so you can feel the change in texture and tone by switching the sounds.\nWe hope that you will use it as a resource to further refine the quality of UX for your apps, services, and products under development, and that it will help you to explore the field of sound design.\nAll UI sounds published on \"SND\" can be used for free, regardless of whether they are commercial or non-commercial. Therefore, you can use them not only for prototyping, but also for implementation in your services. *Please check the terms of use for details.",
+	"license": "MIT",
+	"homepage": "https://snd.dev/",
+	"main": "dist/index.js",
+	"scripts": {
+		"dev": "npm run build_npm & npm run build_browser && npm run server & tsc-watch --onSuccess \"npm run build_browser\"",
+		"server": "browser-sync start --server --files '*.html, ./dist/browser/*.js'",
+		"build": "npm run build_npm & npm run build_browser",
+		"build_browser": "rollup -c && node ./server/postScript.js",
+		"build_npm": "tsc",
+		"audio_sprite": "audiosprite -o ./assets/sounds/sprite/$npm_config_dir/audioSprite ./assets/sounds/$npm_config_dir/*.wav",
+		"audio_sprite_all": "zx ./server/audioSprite.mjs",
+		"copy_json": "node ./server/copyJson.js"
+	},
+	"author": "DENTSU INC.",
+	"keywords": [
+		"javascript",
+		"typescript",
+		"js",
+		"ts",
+		"webaudio",
+		"webaudio-api",
+		"audio",
+		"snd"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/snd-lib/snd-lib/"
+	},
+	"dependencies": {
+		"events": "^3.3.0"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.16.7",
+		"@babel/preset-env": "^7.16.7",
+		"@rollup/plugin-babel": "^5.3.0",
+		"@rollup/plugin-commonjs": "^21.0.1",
+		"@rollup/plugin-json": "^4.1.0",
+		"@rollup/plugin-node-resolve": "^13.1.3",
+		"@rollup/plugin-typescript": "^8.3.0",
+		"@types/node": "^17.0.8",
+		"audiosprite": "^0.7.2",
+		"babel-plugin-add-module-exports": "^1.0.4",
+		"browser-sync": "^2.27.7",
+		"fs-extra": "^10.0.0",
+		"javascript-obfuscator": "^3.0.0",
+		"rollup": "^2.63.0",
+		"rollup-plugin-polyfill-node": "^0.8.0",
+		"rollup-plugin-terser": "^7.0.2",
+		"ts-node": "^10.4.0",
+		"tsc-watch": "^4.6.0",
+		"tslib": "^2.3.1",
+		"typescript": "^4.5.5",
+		"zx": "^4.2.0"
+	}
+}

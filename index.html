@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SND HTML+JavaScript Demo</title>
+	<style>
+		*,body{font-family:sans-serif;font-size:14px}h1{font-size:150%;margin:2rem 1rem}h2{font-size:125%;margin:2rem 1rem}.container{max-width:640px;margin-bottom:2rem}.tap_area{background-color:#ccc;margin-left:.5rem;padding:.5rem 2rem;border-radius:5px;user-select:none}p{margin:1rem}section a{margin-right:.5rem}section{display:block;padding:1rem;margin:1rem;background-color:#f0f0f0;border-radius:5px}.controls{display:flex;flex-wrap:wrap}.box{width:6rem;height:3rem;margin-right:1rem;display:flex;justify-content:center;align-items:center}a{display:block;width:100%;height:100%;background-color:#333;border-radius:5px;line-height:3rem;text-decoration:none;color:#fff;text-align:center;transition:all .25s ease-out}a:hover{background-color:#666}.check{display:flex;align-items:center;margin-right:10px}
+	</style>
+</head>
+<body>
+    <h1>SND HTML+JavaScript Demo</h1>
+    <div class="container">
+      <p>Select a sound kit and a sound to play.</p>
+
+      <section>
+        Sound kit
+        <select id="js__select--kit" name="example">
+          <option value=""></option>
+        </select>
+      </section>
+      <section>
+        Sound
+        <select id="js__select--sound" name="example">
+          <option value=“”></option>
+        </select>
+      </section>
+      <div class="controls">
+        <p id="js__button--play" class="box">
+          <a href="#">Play</a>
+        </p>
+        <p id="js__button--stop" class="box">
+          <a href="#">Stop</a>
+        </p>
+        <p class="check">
+          <input  id="js__checkbox--loop" type="checkbox" />
+          <label>loop</label>
+        </p>
+        <p class="check">
+          <input id="js__checkbox--mute" type="checkbox" />
+          <label>mute</label>
+        </p>
+      </div>
+      <section id="js__status" class="status">
+        &nbsp;
+      </section>
+    </div>
+
+	<!-- scripts -->
+	<script src="./dist/browser/snd.js"></script>
+	<script>
+		const snd = new Snd({preloadSoundKit: Snd.KITS.SND01})
+		const status = document.getElementById("js__status")
+		const playBtn = document.getElementById("js__button--play")
+		const stopBtn = document.getElementById("js__button--stop")
+		const loopBtn = document.getElementById("js__checkbox--loop")
+		const muteBtn = document.getElementById("js__checkbox--mute")
+		let seledctedSound = "button"
+		let loop = false
+
+		const initButtons = () => {
+		playBtn.addEventListener("click", () => {
+			status.textContent = `play ${seledctedSound}`
+			snd && snd.play(seledctedSound, {loop})
+		})
+		stopBtn.addEventListener("click", () => {
+			status.textContent = `stop ${seledctedSound}`
+			snd && snd.stop(seledctedSound)
+		})
+		loopBtn.addEventListener("click", () => {
+			loop = loopBtn.checked
+			snd && snd.stop(seledctedSound)
+		})
+		muteBtn.addEventListener("click", () => {
+			if(muteBtn.checked) {
+				status.textContent = `mute`
+				snd && snd.mute()
+			} else {
+				status.textContent = `unmute`
+				snd && snd.unmute()
+			}
+		})
+		}
+
+		// Initialize sound kit select.
+		const initKitSelection = () => {
+		const select = document.getElementById("js__select--kit")
+		const template = select.getElementsByTagName("option")[0]
+		template.remove()
+		for(const i in Snd.KITS) {
+			const opt = template.cloneNode(true)
+			opt.textContent = opt.value = Snd.KITS[i]
+			select.appendChild(opt)
+		}
+			select.addEventListener("change", async () => {
+			status.textContent = `setting soundKit: ${select.value}`
+			snd && await snd.load(select.value)
+			status.textContent = `setting completed: ${select.value}`
+		})
+		}
+
+		// Initialize sound select.
+		const initSoundSelection = () => {
+		const select = document.getElementById("js__select--sound")
+		const template = select.getElementsByTagName("option")[0]
+		template.remove()
+		for(const k in Snd.SOUNDS) {
+			const opt = template.cloneNode(true)
+			opt.textContent = opt.value = Snd.SOUNDS[k]
+			select.appendChild(opt)
+		}
+		select.addEventListener("change", () => {
+			snd && snd.stop(seledctedSound)
+			seledctedSound = select.value
+		})
+		}
+
+		// Listen window click event to initialize audio context.
+		window.addEventListener("click", async () => {
+		status.textContent = `Audio context initialized`
+
+		}, {once: true})
+
+		// Main
+		initButtons()
+		initSoundSelection()
+		initKitSelection()
+	</script>
+</body>
+</html>

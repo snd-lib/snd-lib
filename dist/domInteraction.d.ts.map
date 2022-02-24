@@ -1,0 +1,1 @@
+{"version":3,"file":"domInteraction.d.ts","sourceRoot":"","sources":["../src/domInteraction.ts"],"names":[],"mappings":"AAAA,OAAO,YAAY,MAAM,QAAQ,CAAC;AAKlC,MAAM,CAAC,OAAO,OAAO,cAAe,SAAQ,YAAY;IAEvD,gBAAuB,QAAQ,EAAE,UAAU,CAAA;;IAO3C,OAAO,CAAC,KAAK;IAgBb,OAAO,CAAC,aAAa;IAgCrB,OAAO,CAAC,OAAO;IAIf,OAAO,CAAC,QAAQ;IAWhB,OAAO,CAAC,KAAK;CAKb"}

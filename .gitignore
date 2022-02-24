@@ -1,0 +1,7 @@
+/node_modules/
+/browser/
+/sndlib/
+/docs/
+.vscode
+/assets/sounds/*
+!/assets/sounds/sprite

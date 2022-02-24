@@ -1,0 +1,14 @@
+/src/
+/server/
+/node_modules/
+tsconfig.json
+.eslintrc.json
+.babelrc.js
+.node-version
+.gitignore
+rollup.config.js
+construction.png
+README_DEV.md
+index.html
+/assets/sounds/*
+!/assets/sounds/sprite
