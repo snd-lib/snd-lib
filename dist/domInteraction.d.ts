@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import EventEmitter from "events";
 export default class DOMInteraction extends EventEmitter {
     static readonly INTERACT: "interact";
