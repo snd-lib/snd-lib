@@ -32,7 +32,7 @@ All UI sounds published on "SND" can be used for free, regardless of whether the
 ## Install
 #### npm
 ```sh
-$ npm install snd-lib
+$ npm install snd-lib/snd-lib
 ```
 
 #### CDN
@@ -305,7 +305,7 @@ Sound key is required to call [play()](#play) and [stop()](#stop) method.
 <br/><br/>
 
 ```javascript
-import Snd from "snd";
+import Snd from "snd-lib";
 Snd.SOUNDS
 ```
 | name             | description            |
