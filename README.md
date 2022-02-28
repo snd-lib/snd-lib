@@ -43,7 +43,7 @@ $ npm install snd-lib
 ## Usage
 node
 ```javascript
-import Snd from 'snd';
+import Snd from 'snd-lib';
 
 const snd = new Snd();
 
