@@ -32,7 +32,7 @@ All UI sounds published on "SND" can be used for free, regardless of whether the
 ## Install
 #### npm
 ```sh
-$ npm install snd-lib/snd-lib
+$ npm install snd-lib
 ```
 
 #### CDN
