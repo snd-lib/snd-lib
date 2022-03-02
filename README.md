@@ -343,8 +343,8 @@ Snd.SOUNDS
 
 
 ## License
-The source code is licensed under the terms of the MIT license.
-The audio materials included may be used free of charge, but the copyright and all other intellectual property rights of the audio files belong to the credited sound designer (author).  See https://snd.dev/ for the details.
+Copyrights
+The UI sound assets on this website are available for free use; provided, however, that the copyrights of all sound, belong to each sound designers credited.
 
 ## Contact
 Dentsu Customer Experience Creative Center conducts research and development on sound for better user experience, please feel free to contact us for UI sound development requests, consultations on sound-related projects, requests for lectures, and requests for interviews.
