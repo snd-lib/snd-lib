@@ -197,6 +197,7 @@ export default class AudioSource {
 		const id = this._uniqueKey;
 		this._play(id, key, options);
 		this.setLoop(options.loop!, id);
+		this.setVolume(options.volume!, id)
 
 		return id;
 	}
