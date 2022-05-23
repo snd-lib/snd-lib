@@ -311,10 +311,10 @@ Snd.SOUNDS
 | name             | description            |
 | ---------------- | ----------------- |
 | button | Unlike Tap sound, this sound is played to clearly indicate to the user that they have pressed a UI element that performs a specific function, such as a button. In combination with visual effects, it can provide the user the feeling that they have definitely pressed a specific button. |
-| caution | This sound is played when you press a disabled button. The sound is not as strong as the Caution sound described below. The sound is simply to indicate that the button itself is invalid. |
+| caution | A caution sound. This sound is played to indicate to the user that something is wrong, has a slightly more negative sound than Notification. |
 | celebration | This is a sound to celebrate the moment when user have achieved the biggest goal of each application. For example, when user send an email in an email app, or when user has checked the last task in a task management app. It creates a climax in the app's UX. |
 | disabled | This sound is played when you press a disabled button. The sound is not as strong as the Caution sound described below. The sound is simply to indicate that the button itself is invalid. |
-| notification | A caution sound. This sound is played to indicate to the user that something is wrong, has a slightly more negative sound than Notification. |
+| notification | Notification sound. This sound is played to alert the user when there is some kind of notification from the app. |
 | progress_loop | This sound is played to clearly indicate that some task is being processed, such as loading, dragging, etc. It is designed to be played in a loop while the task is running. After the task is completed, it is a nice to play a sound to indicate that the work has been completed according to the type of task. However, if the processing time is expected to be very long, or if the processing occurs frequently, the sound will be played all the time, so consider carefully which task to assign the sound to. |
 | ringtone_loop | This is the sound with the highest level of alert compared to Notification and Caution. It is designed to be played in a loop until the user takes action. It is intended to be used as a ringing sound or alarm sound. |
 | select | This sound is played when a specific UI element is selected such as a checkbox, radio button, choice chip, or input form. In combination with visual effects, it can be used to create a responsive feeling to the user that they have definitely selected a specific element. |
