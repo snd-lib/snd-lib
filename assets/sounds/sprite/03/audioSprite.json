@@ -1,0 +1,145 @@
+{
+  "resources": [
+    "./assets/sounds/sprite/03/audioSprite.ogg",
+    "./assets/sounds/sprite/03/audioSprite.m4a",
+    "./assets/sounds/sprite/03/audioSprite.mp3",
+    "./assets/sounds/sprite/03/audioSprite.ac3"
+  ],
+  "spritemap": {
+    "button": {
+      "start": 0,
+      "end": 0.4033333333333333,
+      "loop": false
+    },
+    "caution": {
+      "start": 2,
+      "end": 2.2503854875283444,
+      "loop": false
+    },
+    "celebration": {
+      "start": 4,
+      "end": 5.0561224489795915,
+      "loop": false
+    },
+    "disabled": {
+      "start": 7,
+      "end": 7.1000680272108845,
+      "loop": false
+    },
+    "notification": {
+      "start": 9,
+      "end": 9.753197278911564,
+      "loop": false
+    },
+    "progress_loop": {
+      "start": 11,
+      "end": 12.701383219954648,
+      "loop": false
+    },
+    "ringtone_loop": {
+      "start": 14,
+      "end": 16.085532879818594,
+      "loop": false
+    },
+    "select": {
+      "start": 18,
+      "end": 18.199909297052155,
+      "loop": false
+    },
+    "swipe_01": {
+      "start": 20,
+      "end": 20.138639455782315,
+      "loop": false
+    },
+    "swipe_02": {
+      "start": 22,
+      "end": 22.14278911564626,
+      "loop": false
+    },
+    "swipe_03": {
+      "start": 24,
+      "end": 24.14666666666667,
+      "loop": false
+    },
+    "swipe_04": {
+      "start": 26,
+      "end": 26.158798185941045,
+      "loop": false
+    },
+    "swipe_05": {
+      "start": 28,
+      "end": 28.142585034013607,
+      "loop": false
+    },
+    "tap_01": {
+      "start": 30,
+      "end": 30.03,
+      "loop": false
+    },
+    "tap_02": {
+      "start": 32,
+      "end": 32.030589569160995,
+      "loop": false
+    },
+    "tap_03": {
+      "start": 34,
+      "end": 34.03022675736961,
+      "loop": false
+    },
+    "tap_04": {
+      "start": 36,
+      "end": 36.034013605442176,
+      "loop": false
+    },
+    "tap_05": {
+      "start": 38,
+      "end": 38.037120181405896,
+      "loop": false
+    },
+    "toggle_off": {
+      "start": 40,
+      "end": 40.22455782312925,
+      "loop": false
+    },
+    "toggle_on": {
+      "start": 42,
+      "end": 42.2743537414966,
+      "loop": false
+    },
+    "transition_down": {
+      "start": 44,
+      "end": 44.60936507936508,
+      "loop": false
+    },
+    "transition_up": {
+      "start": 46,
+      "end": 46.62498866213152,
+      "loop": false
+    },
+    "type_01": {
+      "start": 48,
+      "end": 48.04462585034014,
+      "loop": false
+    },
+    "type_02": {
+      "start": 50,
+      "end": 50.03868480725624,
+      "loop": false
+    },
+    "type_03": {
+      "start": 52,
+      "end": 52.07,
+      "loop": false
+    },
+    "type_04": {
+      "start": 54,
+      "end": 54.04698412698413,
+      "loop": false
+    },
+    "type_05": {
+      "start": 56,
+      "end": 56.045034013605445,
+      "loop": false
+    }
+  }
+}

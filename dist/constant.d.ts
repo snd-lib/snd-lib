@@ -8,7 +8,7 @@ declare const EVENT_CLASS_NAMES: Readonly<{
     [key: string]: string;
 }>;
 declare const TAG_EVENT_SOUND: DOMEventSound;
-export declare type KitKinds = "01" | "02";
+export declare type KitKinds = "01" | "02" | "03";
 declare const KITS: Readonly<{
     [key: string]: KitKinds;
 }>;

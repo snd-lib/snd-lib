@@ -40,7 +40,12 @@ class AudioSource {
             this._ctx = new AudioContext();
             const emptySrc = this._ctx.createBufferSource();
             emptySrc.start();
-            emptySrc.stop();
+            try {
+                emptySrc.stop();
+            }
+            catch (e) {
+                console.warn(e);
+            }
             this._isActive = true;
             this._analyzeAllInstances();
         }

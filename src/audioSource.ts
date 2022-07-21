@@ -54,11 +54,15 @@ export default class AudioSource {
 
 			const emptySrc = this._ctx.createBufferSource();
 			emptySrc.start();
-			emptySrc.stop();
-
+			try {
+				emptySrc.stop();
+			} catch(e) {
+				console.warn(e);
+			}
 			this._isActive = true;
 
 			this._analyzeAllInstances();
+
 		} catch (err) {
 			throw new Error(`an err occurred while AudioSource.setup ${err}`);
 		}
@@ -267,7 +271,6 @@ export default class AudioSource {
 		if (options.loop!) {
 			audioNodes.audioSrc!.start(AudioSource._ctx!.currentTime + options.delay!, start, end);
 		} else {
-
 			const dur = Math.max(end - start, 0.1);
 			audioNodes.audioSrc!.start(AudioSource._ctx!.currentTime + options.delay!, start, dur);
 		}

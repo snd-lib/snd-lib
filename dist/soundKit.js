@@ -61,7 +61,7 @@ class SoundKit {
                 this._audioSrc.fade(0, fadeoutDuration, id);
             }, (options.duration - fadeoutDuration) * 1000);
         }
-        this._ids.set(key, id);
+        this._ids.set(key.replace(/_[0-9][0-9]/, ""), id);
     }
     stop(soundKey) {
         const id = this._ids.get(soundKey);

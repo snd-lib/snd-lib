@@ -52,7 +52,7 @@ export default class SoundKit {
 			}, (options.duration! - fadeoutDuration) * 1000);
 		}
 
-		this._ids.set(key, id);
+		this._ids.set(key.replace(/_[0-9][0-9]/, ""), id);
 	}
 
 	public stop(soundKey: string): void {

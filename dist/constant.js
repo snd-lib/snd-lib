@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.TOGGLE_SOUND_KEYS = exports.TYPE_SOUND_KEYS = exports.SWIPE_SOUND_KEYS = exports.TAP_SOUND_KEYS = exports.EVENT_CLASS_NAMES = exports.SOUNDS = exports.ENABLE_TAGS = exports.KIT_INFO = exports.KITS = void 0;
 const _01_json_1 = __importDefault(require("./json/01.json"));
 const _02_json_1 = __importDefault(require("./json/02.json"));
+const _03_json_1 = __importDefault(require("./json/03.json"));
 const BUTTON = "button";
 const CAUTION = "caution";
 const CELEBRATION = "celebration";
@@ -138,18 +139,23 @@ const TAG_EVENT_SOUND = {
 exports.ENABLE_TAGS = TAG_EVENT_SOUND;
 const _KITS = {
     SND01: "01",
-    SND02: "02"
+    SND02: "02",
+    SND03: "03",
 };
 const KITS = Object.freeze(_KITS);
 exports.KITS = KITS;
 const _KIT_INFO = {
     [KITS.SND01]: {
         json: _01_json_1.default,
-        audioSrc: "https://cdn.jsdelivr.net/gh/snd-lib/snd-lib@v1.0.0/assets/sounds/sprite/01/audioSprite.mp3",
+        audioSrc: "https://cdn.jsdelivr.net/gh/snd-lib/snd-lib@v1.1.1/assets/sounds/sprite/01/audioSprite.mp3",
     },
     [KITS.SND02]: {
         json: _02_json_1.default,
-        audioSrc: "https://cdn.jsdelivr.net/gh/snd-lib/snd-lib@v1.0.0/assets/sounds/sprite/02/audioSprite.mp3",
+        audioSrc: "https://cdn.jsdelivr.net/gh/snd-lib/snd-lib@v1.1.1/assets/sounds/sprite/02/audioSprite.mp3",
+    },
+    [KITS.SND03]: {
+        json: _03_json_1.default,
+        audioSrc: "https://cdn.jsdelivr.net/gh/snd-lib/snd-lib@v1.1.1/assets/sounds/sprite//03/audioSprite.mp3",
     },
 };
 const KIT_INFO = Object.freeze(_KIT_INFO);
