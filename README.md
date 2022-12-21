@@ -298,6 +298,7 @@ Triggered when the sound kit has change.
 | ---------------- | --- |----------------- |
 | SND01 "sine" | 01 | Yasuhiro Tsuchiya |
 | SND02 "piano" | 02 | Ayako Taniguchi |
+| SND03 "industrial" | 03 | INDUSTRIAL JP |
 
 #### key
 
