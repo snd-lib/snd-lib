@@ -272,6 +272,8 @@ class AudioSource {
         return __awaiter(this, void 0, void 0, function* () {
             yield this._analyzePromise;
             this._play(id, key, options);
+            this.setLoop(options.loop, id);
+            this.setVolume(options.volume, id);
         });
     }
 }

@@ -291,5 +291,7 @@ export default class AudioSource {
 	private async _playLater(id: number, key: string, options: PlayOptions): Promise<void> {
 		await this._analyzePromise!;
 		this._play(id, key, options);
+		this.setLoop(options.loop!, id);
+		this.setVolume(options.volume!, id)
 	}
 }
