@@ -107,6 +107,7 @@ new Snd(options: SndOptions);
 #### PlayOptions
 | name | type| default | description |
 | ---------------- | --------------------- | ------- | ------------------------------------- |
+| index | null \| number | null | Sound playback number |
 | loop | boolean | false | whether loop or not |
 | volume | number | 1 | Audio volume |
 | delay | number | 0 | Delay time (second) |
