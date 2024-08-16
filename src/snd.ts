@@ -12,6 +12,7 @@ export interface SndOptions {
 }
 
 export interface PlayOptions {
+	index?: null | 0 | 1 | 2 | 3 | 4;
 	loop?: boolean;
 	volume?: number;
 	duration?: number;
@@ -46,6 +47,7 @@ export default class Snd extends EventEmitter {
 		preloadSoundKit: null,
 	};
 	private static _defaultPlayOptions: PlayOptions = {
+		index: null,
 		loop: false,
 		volume: 1,
 		delay: 0,
@@ -149,7 +151,9 @@ export default class Snd extends EventEmitter {
 		if (soundKey === SOUNDS.TAP) return this.playTap(options);
 		if (soundKey === SOUNDS.TYPE) return this.playType(options);
 		if (soundKey === SOUNDS.SWIPE) return this.playSwipe(options);
-
+		if ( options.index !== null && options.index !== undefined && options.index !== 0 ){
+			throw("Index out of range");
+		}
 		this._soundKit.play(soundKey, options);
 	}
 
@@ -228,6 +232,13 @@ export default class Snd extends EventEmitter {
 	}
 
 	private _playRandom(keys: string[], options: PlayOptions = {}): void {
+		if(options.index !== null && options.index !== undefined){
+			if(options.index < 0 && options.index >= keys.length){
+				throw("Index out of range");
+			}
+			this.play(keys[options.index], options);
+			return;
+		} 
 		this.play(keys[Math.floor(Math.random() * keys.length)], options);
 	}
 
