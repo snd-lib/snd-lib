@@ -133,6 +133,9 @@ class Snd extends events_1.default {
             return this.playType(options);
         if (soundKey === constant_1.SOUNDS.SWIPE)
             return this.playSwipe(options);
+        if (options.index !== null && options.index !== undefined && options.index !== 0) {
+            throw ("Index out of range");
+        }
         this._soundKit.play(soundKey, options);
     }
     stop(key) {
@@ -192,6 +195,13 @@ class Snd extends events_1.default {
         this.play(Snd.SOUNDS.TOGGLE_OFF, options);
     }
     _playRandom(keys, options = {}) {
+        if (options.index !== null && options.index !== undefined) {
+            if (options.index < 0 && options.index >= keys.length) {
+                throw ("Index out of range");
+            }
+            this.play(keys[options.index], options);
+            return;
+        }
         this.play(keys[Math.floor(Math.random() * keys.length)], options);
     }
     _muteOnBlur() {
@@ -230,6 +240,7 @@ Snd._defaultOptions = {
     preloadSoundKit: null,
 };
 Snd._defaultPlayOptions = {
+    index: null,
     loop: false,
     volume: 1,
     delay: 0,

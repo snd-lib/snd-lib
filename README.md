@@ -37,7 +37,7 @@ $ npm install snd-lib
 
 #### CDN
 ```html
-<script src="https://cdn.jsdelivr.net/gh/snd-lib/snd-lib@v1.2.1/dist/browser/snd.js?kit=01"></script>
+<script src="https://cdn.jsdelivr.net/gh/snd-lib/snd-lib@v1.2.2/dist/browser/snd.js?kit=01"></script>
 ```
 
 ## Usage
@@ -69,7 +69,7 @@ HTML
 <html>
 	<head>
 		<!-- Load JavaScript file from CDN -->
-		<script src="https://cdn.jsdelivr.net/gh/snd-lib/snd-lib@v1.2.1/dist/browser/snd.js?kit=01"></script>
+		<script src="https://cdn.jsdelivr.net/gh/snd-lib/snd-lib@v1.2.2/dist/browser/snd.js?kit=01"></script>
 	</head>
 	<body>
 		<!-- Play Button sound on click -->

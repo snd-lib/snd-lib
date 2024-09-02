@@ -7,6 +7,7 @@ export interface SndOptions {
     preloadSoundKit?: null | KitKinds;
 }
 export interface PlayOptions {
+    index?: null | 0 | 1 | 2 | 3 | 4;
     loop?: boolean;
     volume?: number;
     duration?: number;
