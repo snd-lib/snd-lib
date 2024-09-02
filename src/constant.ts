@@ -150,17 +150,17 @@ const KITS = Object.freeze(_KITS);
 const _KIT_INFO: { [key: string]: { json: any, audioSrc: string; }; } = {
 	[KITS.SND01]: {
 		json: SOUND_KIT_01,
-		audioSrc: "https://cdn.jsdelivr.net/gh/snd-lib/snd-lib@v1.2.0/assets/sounds/sprite/01/audioSprite.mp3",
+		audioSrc: "https://cdn.jsdelivr.net/gh/snd-lib/snd-lib@v1.2.1/assets/sounds/sprite/01/audioSprite.mp3",
 
 	},
 	[KITS.SND02]: {
 		json: SOUND_KIT_02,
-		audioSrc: "https://cdn.jsdelivr.net/gh/snd-lib/snd-lib@v1.2.0/assets/sounds/sprite/02/audioSprite.mp3",
+		audioSrc: "https://cdn.jsdelivr.net/gh/snd-lib/snd-lib@v1.2.1/assets/sounds/sprite/02/audioSprite.mp3",
 
 	},
 	[KITS.SND03]: {
 		json: SOUND_KIT_03,
-		audioSrc: "https://cdn.jsdelivr.net/gh/snd-lib/snd-lib@v1.2.0/assets/sounds/sprite//03/audioSprite.mp3",
+		audioSrc: "https://cdn.jsdelivr.net/gh/snd-lib/snd-lib@v1.2.1/assets/sounds/sprite//03/audioSprite.mp3",
 
 	},
 };
