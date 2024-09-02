@@ -133,8 +133,10 @@ class Snd extends events_1.default {
             return this.playType(options);
         if (soundKey === constant_1.SOUNDS.SWIPE)
             return this.playSwipe(options);
-        if (options.index !== null && options.index !== undefined && options.index !== 0) {
-            throw ("Index out of range");
+        if (!(soundKey.includes(constant_1.SOUNDS.TAP) || soundKey.includes(constant_1.SOUNDS.TYPE) || soundKey.includes(constant_1.SOUNDS.SWIPE))) {
+            if (options.index !== null && options.index !== undefined && options.index !== 0) {
+                throw ("Index out of range");
+            }
         }
         this._soundKit.play(soundKey, options);
     }

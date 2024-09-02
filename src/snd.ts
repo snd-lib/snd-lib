@@ -151,8 +151,10 @@ export default class Snd extends EventEmitter {
 		if (soundKey === SOUNDS.TAP) return this.playTap(options);
 		if (soundKey === SOUNDS.TYPE) return this.playType(options);
 		if (soundKey === SOUNDS.SWIPE) return this.playSwipe(options);
-		if ( options.index !== null && options.index !== undefined && options.index !== 0 ){
-			throw("Index out of range");
+		if (!(soundKey.includes(SOUNDS.TAP) || soundKey.includes(SOUNDS.TYPE) || soundKey.includes(SOUNDS.SWIPE))) {
+			if ( options.index !== null && options.index !== undefined && options.index !== 0 ){
+				throw("Index out of range");
+			}
 		}
 		this._soundKit.play(soundKey, options);
 	}
