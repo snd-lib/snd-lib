@@ -107,7 +107,6 @@ const EVENT_CLASS_NAMES = Object.freeze(_EVENT_CLASS_NAMES);
 const TAG_EVENT_SOUND: DOMEventSound = {
 	"input:text,email,number,password,search,url,tel": {
 		events: {
-
 			"input": "type"
 		}
 	},
@@ -129,6 +128,11 @@ const TAG_EVENT_SOUND: DOMEventSound = {
 	"select": {
 		events: {
 			"change": "select"
+		}
+	},
+	"textarea": {
+		events: {
+			"input": "type"
 		}
 	},
 	"any": {
