@@ -112,7 +112,7 @@ new Snd(options: SndOptions);
 | volume | number | 1 | Audio volume |
 | delay | number | 0 | Delay time (second) |
 | duration | number | -1 | Playing duration (second). If this is set to -1 the playing duration will be the original sound duration. |
-| callback | (id: number) => void | () => {} | Callback function that will be called when the sound complete playing. |
+| callback | (id: number) => void | () => {} | Callback function that will be called when the sound completes playing. |
 
 <br/><br/>
 
